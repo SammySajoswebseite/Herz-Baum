@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    background: #fff;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#scene {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#typewriter {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+}
+
+#heart-line {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#heart {
+    width: 70px;
+    height: 70px;
+    background: red;
+    transform: rotate(45deg);
+    margin: auto;
+    cursor: pointer;
+}
+
+#heart::before,
+#heart::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: red;
+    border-radius: 50%;
+}
+
+#heart::before { top: -35px; left: 0; }
+#heart::after { left: -35px; top: 0; }
+
+#ground {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background: black;
+    transform: translateX(-50%);
+    transition: width 1.2s ease-in-out;
+}
+
+#drop {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    width: 18px;
+    height: 26px;
+    background: red;
+    border-radius: 50%;
+    display: none;
+}
+
+#tree {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#trunk {
+    width: 12px;
+    height: 160px;
+    background: #5a3b1e;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform 1.2s ease-out;
+}
+
+#counter {
+    position: absolute;
+    left: 5%;
+    bottom: 22%;
+    font-size: 18px;
+}
